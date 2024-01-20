@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Image source={require('./assets/Logo.png')} style={styles.imagen} />
+      <Text style={styles.texto}>Beast Mode App</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +14,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000000',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  imagen: {
+    width: 200, 
+    height: 200, 
+    resizeMode: 'contain', 
+  },
+  texto: {
+    color: "#ffff",
+  }
+
 });
